@@ -1,9 +1,9 @@
-const getAll = (req, res) => {
-    res.status(200).json({
-        "musics": [ "Get out alive", "Deus e eu no sertao", "John Wick's theme", "Caso indefinido" ]
-    })
+const models = require('../models/userModel')
+
+const getName = (req, res) => {
+    res.status(200).json(models.getName())
 }
 
 module.exports = {
-    getAll,
+    getName,
 }
